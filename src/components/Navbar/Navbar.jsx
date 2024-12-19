@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo navigation using Link */}
         <Link to="/home" className="navbar-logo" onClick={closeMobileMenu}>
           <img
-            src="/public/cargovertex-logo-removebg-preview.png"
+            src="/cargovertex-logo-removebg-preview.png"
             alt="cargovertex-logo"
             className="navbar-image"
           />
