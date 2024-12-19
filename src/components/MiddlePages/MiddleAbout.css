@@ -1,0 +1,49 @@
+/* Reset any default body margin */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the section starts at the top */
+#about {
+  text-align: center;
+  padding: 100px 20px; /* Adjust to add space between content and top */
+  margin: 0; /* Remove any additional margins */
+  scroll-margin-top: 0; /* Avoid gaps when scrolling to this section */
+ background-color: #fff;
+}
+
+/* Optional: Remove spacing caused by sibling elements */
+#about:first-of-type {
+  margin-top: 0;
+  padding-top: 0; /* If you don't need additional padding */
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#about h2 .highlight {
+  color: blue;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto 30px auto;
+  max-width: 800px;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.about-images img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
