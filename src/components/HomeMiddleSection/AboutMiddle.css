@@ -5,6 +5,8 @@
   padding: 40px;
   background: #f9f9f9;
   position: relative;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
 }
 
 .content {
@@ -30,30 +32,6 @@
   margin-bottom: 30px;
 }
 
-.search-box {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 25px;
-  max-width: 300px;
-}
-
-.search-box span {
-  flex: 1;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.search-box button {
-  background-color: #0073e6;
-  color: #fff;
-  border: none;
-  padding: 5px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
 .image-container {
   position: relative;
   max-width: 45%;
@@ -64,18 +42,45 @@
 
 .image-container img {
   width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
   border-radius: 10px;
   object-fit: cover;
 }
 
-.circle {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background-color: #0073e6;
-  border-radius: 50%;
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    /* Stack content vertically */
+    padding: 20px;
+  }
+
+  .content {
+    max-width: 100%;
+    /* Full width on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+    /* Smaller heading size */
+  }
+
+  .content p {
+    font-size: 0.9rem;
+    /* Adjust font size */
+  }
+
+  .image-container {
+    max-width: 100%;
+    /* Full width for the image */
+  }
+
+  .image-container img {
+    max-width: 100%;
+    /* Ensure the image fits within the container */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
 }

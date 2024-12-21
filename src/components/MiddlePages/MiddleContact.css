@@ -16,6 +16,10 @@ h1 {
   text-align: center;
 }
 
+h1 .highlight {
+  color: blue;
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;

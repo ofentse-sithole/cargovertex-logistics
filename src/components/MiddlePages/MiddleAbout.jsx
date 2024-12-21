@@ -1,13 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./MiddleAbout.css"; // Import CSS for styling
 
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <section id="about">
-      <h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1>
         <span className="highlight">About</span> Us
-      </h2>
+      </h1>
       <p>
         CargoVertex, your trusted partner in logistics and transportation. Based in the heart of Gauteng, we specialize in helping individuals and business owners make seamless moves, whether relocating to a new home or expanding your business operations.
       </p>

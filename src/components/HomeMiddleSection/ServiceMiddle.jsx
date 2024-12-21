@@ -15,7 +15,7 @@ const Services = () => {
           for individuals and business owners needing to relocate. We offer the opportunity to 
           rent a variety of vehicles tailored to meet your moving needs. With our expansive reach, 
           we serve all nine provinces of South Africa, ensuring seamless and efficient transportation. Based in Gauteng, 
-          our team is committed to delivering top-notch service, making your move as smooth and hassle-free as possible. 🚚🌟</p>
+          our team is committed to delivering top-notch service, making your move as smooth and hassle-free as possible.</p>
 
         {/* Service 1 */}
         <div className="service-item">

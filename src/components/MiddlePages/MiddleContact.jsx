@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './MiddleContact.css'; // Assuming you have a CSS file for styling
 
 const MiddleContact = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -24,14 +30,20 @@ const MiddleContact = () => {
 
   return (
     <div className="contact-page">
-      <h1>Contact Us</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1>
+        <b><span className="highlight">Contact</span> Us</b>
+      </h1>
       <p>If you have any questions or inquiries, please feel free to reach out to us using the form below or via our contact information.</p>
       <div className="contact-container">
         {/* Contact Information */}
         <div className="contact-info">
           <h2>Contact Information</h2>
           <p><strong>Email:</strong> info@cargovertex.com</p>
-          <p><strong>Phone:</strong> +27 123 456 7890</p>
+          <p><strong>Phone:</strong> +27 11 275 3980</p>
         </div>
 
         {/* Contact Form */}

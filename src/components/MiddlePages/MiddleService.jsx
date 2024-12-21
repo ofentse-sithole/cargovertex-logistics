@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MiddleService.css"; // Assuming you have a CSS file for styling
 
 const MiddleService = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const [distance, setDistance] = useState(0);
   const [deliveryFee, setDeliveryFee] = useState(0);
   const [vatAmount, setVatAmount] = useState(0);
   const [total, setTotal] = useState(0);
 
-  const stationaryAmount = 50; // Base fee
+  const stationaryAmount = 200; // Base fee
   const pricePerKm = 7; // Cost per kilometer
-  const additionalCharge = 200; // Additional charge for every 5km over 20km
+  const additionalCharge = 400; // Additional charge for every 5km over 20km
   const vatRate = 0.15; // VAT (15%)
 
   const handleCalculate = () => {
@@ -32,9 +37,20 @@ const MiddleService = () => {
   };
 
   return (
-    <div className="service-page">
 
-      <h2>Distance Travelling</h2>
+
+    <div className="service-page">
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <h1>
+        <b><span className="highlight">Our</span> Services</b>
+      </h1>
+      <br/>
+
+      <h3>Distance Travelling</h3>
       <p>
         At CargoVertex, we pride ourselves on offering reliable
         transportation and logistics services across all nine
@@ -57,7 +73,7 @@ const MiddleService = () => {
       <br />
       <br />
 
-      <h2>Vehicle Rental Services</h2>
+      <h3>Vehicle Rental Services</h3>
       <p>We offer a variety of vehicles for rental to deliver your packages safely and efficiently.</p>
       <h3>Our Vehicles</h3>
       <div className="gallery">
@@ -73,9 +89,19 @@ const MiddleService = () => {
         <input
           type="number"
           id="distance"
-          value={distance}
-          onChange={(e) => setDistance(Number(e.target.value))}
+          value={distance === 0 ? "" : distance} // Display empty string if distance is 0
+          onChange={(e) => {
+            const value = e.target.value;
+
+            // If the input is empty, reset the state to 0
+            if (value === "") {
+              setDistance(0);
+            } else {
+              setDistance(Number(value));
+            }
+          }}
         />
+
         <button onClick={handleCalculate}>Calculate</button>
         {total > 0 && (
           <div className="total">
