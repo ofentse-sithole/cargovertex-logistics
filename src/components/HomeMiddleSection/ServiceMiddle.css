@@ -1,38 +1,50 @@
+/* General styles for the section */
 .services-section {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   background: #f9f9f9;
 }
 
+/* Title styles */
 .services-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  /* Reduce font size for better readability on mobile */
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  /* Adjust margin for smaller screens */
 }
 
 .services-title .highlight {
   color: #0073e6;
 }
 
+/* Container styles */
 .services-container {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* Stack items vertically on mobile */
+  align-items: center;
+  gap: 20px;
+  /* Add spacing between items */
 }
 
+/* Service item styles */
 .service-item {
   position: relative;
-  max-width: 300px;
+  max-width: 90%;
+  /* Ensure it fits within the screen width */
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
+  margin: 0 auto;
+  /* Center the items */
 }
 
 .service-item img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
   object-fit: cover;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -42,6 +54,7 @@
   opacity: 0.7;
 }
 
+/* Service info styles */
 .service-info {
   position: absolute;
   top: 50%;
@@ -58,11 +71,51 @@
 }
 
 .service-info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  /* Adjust font size for mobile */
+  margin-bottom: 8px;
 }
 
 .service-info p {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  /* Adjust font size for mobile */
   line-height: 1.4;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .services-container {
+    gap: 15px;
+  }
+
+  .service-info h2 {
+    font-size: 1rem;
+  }
+
+  .service-info p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .services-container {
+    gap: 10px;
+  }
+
+  .service-info h2 {
+    font-size: 0.9rem;
+  }
+
+  .service-info p {
+    font-size: 0.75rem;
+  }
 }
