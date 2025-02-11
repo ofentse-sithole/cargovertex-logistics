@@ -3,22 +3,25 @@ import styled from "styled-components";
 import {useEffect} from 'react';
 import backgroundImage from "../../assets/truck.jpg"; // Add your image to the 'assets' folder
 
-useEffect(() => {
-  // More robust scroll handling
-  setTimeout(() => {
-      window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-      });
-      
-      // Fallback for older browsers
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }, 100);
-}, []);
+
 
 const HeroSection = () => {
+
+  useEffect(() => {
+    // More robust scroll handling
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+        
+        // Fallback for older browsers
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }, 100);
+  }, []);
+
     return (
         <HeroContainer>
             <Content>
